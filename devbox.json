@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "bazelisk"
+  ],
+  "shell": {
+    "init_hook": [
+      "alias bzl=bazelisk"
+    ],
+    "scripts": {
+      "repin_crates": "CARGO_BAZEL_REPIN=1 bazelisk sync --only=crate_index"
+    }
+
+  },
+  "nixpkgs": {
+    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+  }
+}
